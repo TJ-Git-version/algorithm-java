@@ -1,4 +1,4 @@
-package com.surfur.algorithm.arrays;
+package com.surfur.algorithm.other.arrays;
 
 import java.util.Arrays;
 

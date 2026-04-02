@@ -1,4 +1,4 @@
-package com.surfur.algorithm.arrays;
+package com.surfur.algorithm.hots.哈希;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.surfur.algorithm.string;
+package com.surfur.algorithm.other.string;
 
 import java.util.*;
 
