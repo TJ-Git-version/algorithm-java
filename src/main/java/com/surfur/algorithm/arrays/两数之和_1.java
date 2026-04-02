@@ -13,10 +13,10 @@ import java.util.Map;
 public class 两数之和_1 {
 
     public static void main(String[] args) {
-        // int[] nums = {2, 7, 11, 15};
-        // int target = 9;
-        int[] nums = {3, 2, 4};
-        int target = 6;
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+//        int[] nums = {3, 2, 4};
+//        int target = 6;
         // int[] nums = {3, 3};
         // int target = 6;
         int[] ints = twoSum(nums, target);
@@ -31,12 +31,13 @@ public class 两数之和_1 {
      *      n2 = 两数之和 - n1
      */
     public static int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> indexMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            if (!map.containsKey(nums[i])) {
-                map.put(target - nums[i], i);
+            int key = target - nums[i];
+            if (indexMap.containsKey(key)) {
+                return new int[]{indexMap.get(key), i};
             } else {
-                return new int[]{map.get(nums[i]), i};
+                indexMap.put(nums[i], i);
             }
         }
         return new int[]{};
