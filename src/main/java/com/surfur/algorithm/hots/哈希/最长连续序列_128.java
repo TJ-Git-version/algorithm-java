@@ -55,6 +55,13 @@ public class 最长连续序列_128 {
         return maxLen;
     }
 
+    /**
+     * 最优解法（O (n) 时间，不排序）
+     * 核心思路：
+     * 只用 HashSet 存所有数字
+     * 只从连续序列的起点开始遍历（num - 1 不在 set 里 才是起点）
+     * 向后找连续数，统计长度
+     */
     public static int longestConsecutive1(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
