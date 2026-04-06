@@ -32,7 +32,7 @@ public class 无重复字符的最长子串_3 {
         String s1 = "bbbbb";
         String s2 = "pwwkew";
         String s3 = "ohomm";
-        int maxLen = lengthOfLongestSubstring(s3);
+        int maxLen = lengthOfLongestSubstring2(s3);
         System.out.println(maxLen);
     }
 
