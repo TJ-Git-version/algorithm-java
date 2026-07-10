@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * 两数之和
  */
-public class Solution {
+public class TwoSumSolution {
 
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
@@ -19,7 +19,7 @@ public class Solution {
         int[] nums2 = {3, 3};
         int target2 = 6;
 
-        Solution solution = new Solution();
+        TwoSumSolution solution = new TwoSumSolution();
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
         System.out.println(Arrays.toString(solution.twoSum(nums1, target1)));
         System.out.println(Arrays.toString(solution.twoSum(nums2, target2)));
