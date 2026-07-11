@@ -17,31 +17,31 @@ public class LongestConsecutiveSolution {
         System.out.println(longestConsecutiveSolution.longestConsecutive2(nums2));
     }
 
-    public int longestConsecutive2(int[] nums) {
-        int maxLength = 0;
-        if (nums == null || nums.length == 0) {
+        public int longestConsecutive2(int[] nums) {
+            int maxLength = 0;
+            if (nums == null || nums.length == 0) {
+                return maxLength;
+            }
+            // 去重
+            Set<Integer> set = new HashSet<>();
+            for (int num : nums) {
+                set.add(num);
+            }
+            for (Integer num : set) {
+                // 如果num不是序列，则跳过自己
+                if (set.contains(num - 1)) {
+                    continue;
+                }
+                // 以num作为一个起点
+                int y = num + 1;
+                // 循环结束后，y-1才是最后的一个元素
+                while (set.contains(y)) {
+                    y++;
+                }
+                maxLength = Math.max(maxLength, y - num);
+            }
             return maxLength;
         }
-        // 去重
-        Set<Integer> set = new HashSet<>();
-        for (int num : nums) {
-            set.add(num);
-        }
-        for (Integer num : set) {
-            // 如果num不是序列，则跳过自己
-            if (set.contains(num - 1)) {
-                continue;
-            }
-            // 以num作为一个起点
-            int y = num + 1;
-            // 循环结束后，y-1才是最后的一个元素
-            while (set.contains(y)) {
-                y++;
-            }
-            maxLength = Math.max(maxLength, y - num);
-        }
-        return maxLength;
-    }
 
     /**
      * 出异常，超出时间限制
